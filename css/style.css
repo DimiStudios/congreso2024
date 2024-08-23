@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #030f27;
+    color: #05C1E4;
 }
 
 a {
@@ -402,7 +402,7 @@ a:focus {
 }
 
 .section-header p {
-    color: #fdbe33;
+    color: #FB6214;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -502,14 +502,14 @@ a:focus {
 
 .feature .feature-text h3 {
     margin: 0 0 10px 0;
-    color: #fdbe33;
+    color: #FB6214;
     font-size: 25px;
     font-weight: 600;
 }
 
 .feature .feature-text p {
     margin: 0;
-    color: #fdbe33;
+    color: #FB6214;
     font-size: 18px;
     font-weight: 400;
 }
@@ -547,6 +547,8 @@ a:focus {
 
 .about .about-text p {
     font-size: 16px;
+    text-align: justify;
+
 }
 
 .about .about-text a.btn {
@@ -556,15 +558,15 @@ a:focus {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #030f27;
+    color: #fff;
     border-radius: 0;
-    background: #fdbe33;
+    background: #4D19A3;
     transition: .3s;
 }
 
 .about .about-text a.btn:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color: #4D19A3;
+    background: #05C1E4;
 }
 
 @media (max-width: 767.98px) {
@@ -886,14 +888,14 @@ a:focus {
     position: relative;
     padding: 25px 15px;
     text-align: center;
-    background: #030f27;
+    background: #4D19A3;
     transition: .5s;
 }
 
 .team .team-text h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #fdbe33;
+    color: #FB6214;
     transition: .5s;
 }
 
@@ -903,11 +905,11 @@ a:focus {
 }
 
 .team .team-item:hover .team-text {
-    background: #fdbe33;
+    background: #05C1E4;
 }
 
 .team .team-item:hover .team-text h2 {
-    color: #030f27;
+    color: #4D19A3;
     letter-spacing: 1px;
 }
 
@@ -1198,7 +1200,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 18px;
     font-weight: 700;
-    color: #fdbe33;
+    color: #FB6214;
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
