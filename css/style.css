@@ -1281,6 +1281,19 @@ a:focus {
     color: #999999;
 }
 
+.blog .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.blog .blog-item {
+    width: 100%; /* Ocupa todo el ancho de la columna */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
+}
+
+
+
 
 /*******************************/
 /******* Single Post CSS *******/
