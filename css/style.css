@@ -18,14 +18,14 @@ h6 {
 }
 
 a {
-    color: #666666;
+    color: #000000;
     transition: .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #fdbe33;
+    color: #4D19A3;
     outline: none;
     text-decoration: none;
 }
@@ -260,9 +260,9 @@ a:focus {
 }
 
 .carousel .carousel-caption .btn:hover {
-    color: #030f27;
-    background: #fdbe33;
-    border-color: #fdbe33;
+    color: #ffffff;
+    background: #4D19A3;
+    border-color: #4D19A3;
 }
 
 @media (max-width: 767.98px) {
