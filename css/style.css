@@ -82,17 +82,17 @@ a:focus {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between; /* Espacio entre logo y botón */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: center;
+    align-items: center;
+
     height: 100px;
     background: #E5E6E7;
-    padding: 0 20px; /* Agrega un poco de relleno */
 }
 
 .top-bar .logo {
     padding: 10px 0;
     text-align: left;
+    overflow: hidden;
 }
 
 .top-bar .logo h1 {
@@ -111,6 +111,7 @@ a:focus {
 .top-bar .top-bar-item {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .top-bar .top-bar-icon {
@@ -147,50 +148,33 @@ a:focus {
 .top-bar .top-bar-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     color: #fff;
     background: #05C1E4;
     border: 2px solid #05C1E4;
     border-radius: 10px;
-    padding: 10px 20px; /* Asegura que el botón tenga un tamaño adecuado */
+    margin-left: 50px;
+
 }
 
 .top-bar .top-bar-btn:hover {
     color: #fff;
     background: #05a4c0;
     border-color: #05a4c0;
-}
-
-@media (max-width: 1000px) {
-    .top-bar {
-        padding: 0 20px; /* Ajusta el padding en vistas pequeñas */
-    }
-
-    .top-bar .logo {
-        text-align: left;
-        flex: 1; /* Toma el espacio disponible */
-    }
-
-    .top-bar .top-bar-btn {
-        margin-left: auto; /* Empuja el botón hacia la derecha */
-    }
+    margin-left: 50px;
 }
 
 @media (min-width: 992px) {
     .top-bar {
         padding: 0 60px;
     }
-    
-    .top-bar .logo {
-        text-align: left;
-        flex: 1; /* Toma el espacio disponible */
-    }
-
-    .top-bar .top-bar-btn {
-        margin-left: auto; /* Empuja el botón hacia la derecha */
-    }
 }
 
+@media (max-width: 1000px) {
+    .top-bar .logo {
+        text-align: center;
+    }
+}
 
 /*******************************/
 /******** Carousel CSS *********/
@@ -2248,7 +2232,7 @@ a:focus {
   }
   
   a.cart-btn:hover {
-    background-color: #FB6214;
+    background-color: ##FB6214;
     color: #F28123;
   }
   
