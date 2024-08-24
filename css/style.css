@@ -2233,7 +2233,7 @@ a:focus {
   
   a.cart-btn:hover {
     background-color: #FB6214;
-    color: #F28123;
+    color: #fff;
   }
   
   .recent-posts ul li {
