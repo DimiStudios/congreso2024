@@ -2239,8 +2239,8 @@ a:focus {
   }
   
   a.cart-btn:hover {
-    background-color: #051922;
-    color: #F28123;
+    background-color: #FB6214;
+    color: #fff;
   }
   
   .recent-posts ul li {
@@ -2386,7 +2386,7 @@ a:focus {
   a.cart-btn {
     font-family: 'Poppins', sans-serif;
     display: inline-block;
-    background-color: #F28123;
+    background-color: #4D19A3;
     color: #fff;
     padding: 10px 20px;
   }
