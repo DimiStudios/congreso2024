@@ -112,13 +112,23 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 30px; /* Espacio dentro del contenedor a la derecha */
 }
+
+.top-bar .top-bar-item:nth-child(2) {
+    padding-left: 30px; /* Espacio dentro del contenedor a la izquierda */
+}
+
+
+
+
 
 .top-bar .top-bar-icon {
     width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .top-bar .top-bar-icon [class^="flaticon-"]::before {
@@ -153,7 +163,7 @@ a:focus {
     background: #05C1E4;
     border: 2px solid #05C1E4;
     border-radius: 10px;
-    margin-left: 50px;
+    margin-left: 10px;
 
 }
 
@@ -161,7 +171,7 @@ a:focus {
     color: #fff;
     background: #05a4c0;
     border-color: #05a4c0;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 @media (min-width: 992px) {
@@ -906,6 +916,30 @@ a:focus {
     letter-spacing: 1px;
 }
 
+.team .team-text-2 {
+    position: relative;
+    padding: 25px 15px;
+    text-align: center;
+    background: #05C1E4;
+    transition: .5s;
+}
+
+.team .team-text-2 h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4D19A3;
+    transition: .5s;
+}
+
+.team .team-item:hover .team-text-2 {
+    background: #4D19A3;
+}
+
+.team .team-item:hover .team-text-2 h2 {
+    color: #05C1E4;
+    letter-spacing: 1px;
+}
+
 .team .team-social {
     position: absolute;
     width: 100px;
@@ -1191,7 +1225,7 @@ a:focus {
     margin: 0;
     padding: 0 15px 0 25px;
     width: calc(100% - 60px);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: #FB6214;
     text-align: left;
