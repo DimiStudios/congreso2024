@@ -119,12 +119,8 @@ a:focus {
     padding-left: 30px; /* Espacio dentro del contenedor a la izquierda */
 }
 
-
-
-
-
 .top-bar .top-bar-icon {
-    width: 40px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +134,8 @@ a:focus {
 }
 
 .top-bar .top-bar-text {
-    padding-left: 15px;
+    padding-left: 10px;
+    padding-right: 30px;
 }
 
 .top-bar .top-bar-text h3 {
@@ -2697,7 +2694,29 @@ a:focus {
     border-radius: 5px;
   }
 
+  .logo-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
+.logo-slide {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 0 15px;
+}
+
+.logo-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 /*
     /**********************************/
     /*********** Nav Bar CSS **********/
