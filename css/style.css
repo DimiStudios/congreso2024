@@ -2694,7 +2694,8 @@ a:focus {
     border-radius: 5px;
   }
 
-  .logo-carousel {
+/* Carrusel */
+.logo-carousel {
     display: flex;
     overflow: hidden;
     width: 100%;
@@ -2708,7 +2709,7 @@ a:focus {
 
 .logo-slide {
     flex: 0 0 auto;
-    width: 200px;
+    width: 150px; /* Ajusta el tamaño de los logos según sea necesario */
     margin: 0 15px;
 }
 
@@ -2717,6 +2718,23 @@ a:focus {
     height: auto;
     display: block;
 }
+
+/* Estilos responsive */
+
+@media (max-width: 768px) {
+    .logo-slide {
+        width: 120px; /* Ajusta el tamaño de los logos para tabletas */
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-slide {
+        width: 100px; /* Ajusta el tamaño de los logos para móviles */
+        margin: 0 5px;
+    }
+}
+
 /*
     /**********************************/
     /*********** Nav Bar CSS **********/
