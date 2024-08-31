@@ -1218,7 +1218,6 @@ a:focus {
 .blog .blog-img img {
     width: 100%;
     height: auto;
-    /* Mantiene la proporción de la imagen */
 }
 
 .blog .blog-title {
@@ -2341,6 +2340,11 @@ ul.product-share li:hover a {
 
 .service-menu ul li a:hover {
     color: #ffe200;
+}
+.product-section .row {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
 }
 
 .single-product-item {
