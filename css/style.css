@@ -6,6 +6,12 @@ body {
     background: #dddddd;
     font-family: 'Agrandir', sans-serif;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al principio del contenedor */
+    height: 100vh;
 }
 
 h1,
@@ -160,7 +166,6 @@ a:focus {
     background: #05C1E4;
     border: 2px solid #05C1E4;
     border-radius: 10px;
-    margin-left: 10px;
 
 }
 
@@ -168,8 +173,18 @@ a:focus {
     color: #fff;
     background: #05a4c0;
     border-color: #05a4c0;
-    margin-left: 10px;
 }
+
+.top-bar .top-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar .top-bar-item.fecha-congreso {
+    margin-right: 20px; /* Espaciado entre el ítem de la fecha del congreso y el ítem de contacto */
+}
+
 
 @media (min-width: 992px) {
     .top-bar {
@@ -421,26 +436,28 @@ a:focus {
     }
 }
 
-
-/*******************************/
-/********* Feature CSS *********/
-/*******************************/
+/*FEATURE*/
 .feature {
     position: relative;
-    margin-bottom: 40px;
-    margin-left: 130px;
-    margin-right: 130px;
-    margin-top: 130px;
-
+    margin: 40px auto; /* Centra horizontalmente el contenedor */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    padding: 0 15px; /* Padding para pantallas pequeñas */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
+.feature-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.feature .row {
+    justify-content: center;
+}
+ 
 .feature .col-md-12 {
-    background: #030f27;
-}
-
-.feature .col-md-12:nth-child(2n) {
-    color: #030f27;
-    background: #fdbe33;
+    background: #fff;
 }
 
 .feature .feature-item {
@@ -448,77 +465,76 @@ a:focus {
     padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background: #fafafa;
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+    text-align: center; /* Centra el contenido de texto */
 }
 
 .feature .feature-icon {
     position: relative;
-    width: 60px;
+    width: 100%; /* Ajusta el tamaño del contenedor */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.feature .feature-icon::before {
-    position: absolute;
-    content: "";
-    width: 80px;
-    height: 80px;
-    top: -20px;
-    left: -10px;
-    border: 2px dotted #ffffff;
-    border-radius: 60px;
-    z-index: 1;
+.feature .feature-icon img {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    height: auto;    /* Mantiene la relación de aspecto de la imagen */
+    display: block;  /* Elimina el espacio debajo de la imagen */
 }
 
+.feature .feature-icon::before,
 .feature .feature-icon::after {
-    position: absolute;
-    content: "";
-    width: 79px;
-    height: 79px;
-    top: -18px;
-    left: -9px;
-    background: #030f27;
-    border-radius: 60px;
-    z-index: 2;
+    content: none; /* Elimina los bordes de los pseudo-elementos */
 }
 
-.feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #fdbe33;
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .feature {
+        margin: 40px auto; /* Mantiene el centrado horizontal */
+        padding: 0 15px; /* Agrega padding para pantallas más pequeñas */
+    }
 }
 
-.feature .feature-icon [class^="flaticon-"]::before {
-    position: relative;
-    margin: 0;
-    color: #fdbe33;
-    font-size: 60px;
-    line-height: 60px;
-    z-index: 3;
+@media (max-width: 991px) {
+    .feature .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature .feature-icon {
+        margin-bottom: 20px;
+    }
+
+    .feature {
+        margin: 40px auto; /* Mantiene el centrado horizontal */
+        padding: 0 15px; /* Agrega padding para pantallas más pequeñas */
+    }
 }
 
-.feature .feature-text {
-    padding-left: 30px;
+@media (max-width: 767px) {
+    .feature .feature-item {
+        padding: 20px;
+    }
+
+    .feature .feature-icon {
+        width: 100%; /* Asegura que el contenedor use el ancho completo disponible */
+    }
+
+    .feature .feature-icon img {
+        max-width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+        height: auto;    /* Mantiene la relación de aspecto */
+    }
+
+    .feature {
+        margin: 40px auto; /* Mantiene el centrado horizontal */
+        padding: 0 15px; /* Agrega padding para pantallas más pequeñas */
+    }
 }
 
-.feature .feature-text h3 {
-    margin: 0 0 10px 0;
-    color: #FB6214;
-    font-size: 25px;
-    font-weight: 600;
-}
 
-.feature .feature-text p {
-    margin: 0;
-    color: #FB6214;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.feature .col-md-12:nth-child(2n) [class^="flaticon-"]::before,
-.feature .col-md-12:nth-child(2n) h3,
-.feature .col-md-12:nth-child(2n) p {
-    color: #030f27;
-}
 
 
 /*******************************/
