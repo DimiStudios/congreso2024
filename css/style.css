@@ -118,11 +118,11 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 30px;
+    padding-right: 15px;
 }
 
 .top-bar .top-bar-item:nth-child(2) {
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .top-bar .top-bar-icon {
@@ -182,7 +182,7 @@ a:focus {
 }
 
 .top-bar .top-bar-item.fecha-congreso {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 
