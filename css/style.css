@@ -118,11 +118,11 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 .top-bar .top-bar-item:nth-child(2) {
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .top-bar .top-bar-icon {
@@ -141,7 +141,7 @@ a:focus {
 
 .top-bar .top-bar-text {
     padding-left: 10px;
-    padding-right: 30px;
+    padding-right: 10px;
 }
 
 .top-bar .top-bar-text h3 {
