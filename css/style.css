@@ -2746,3 +2746,16 @@ table.order-details tbody td {
     border-radius: 5px; /* Esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el iframe */
 }
+
+/*VENTANA EMERGENTE*/
+.modal-dialog {
+    max-width: 80%;
+    width: auto;
+}
+
+.modal-body img {
+    width: 80%;
+    height: auto; /* La imagen se ajusta dinámicamente */
+    display: block;
+    margin: 0 auto;
+}

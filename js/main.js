@@ -117,6 +117,12 @@
     },
   });
 
+    // Mostrar el modal automáticamente después de que la página se cargue completamente
+    $(document).ready(function(){
+        $('#popupModal').modal('show');
+    });
+
+
   // Portfolio isotope and filter
   var portfolioIsotope = $(".portfolio-container").isotope({
     itemSelector: ".portfolio-item",
