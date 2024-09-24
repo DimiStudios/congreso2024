@@ -872,14 +872,23 @@ a:focus {
     opacity: 1;
 }
 
+/*TEAM*/
 
-/*******************************/
-/*********** Team CSS **********/
-/*******************************/
-.team .container {
+.team {
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.team-item {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .team .row {
@@ -888,21 +897,21 @@ a:focus {
     flex-wrap: wrap;
 }
 
-.team .team-item {
-    position: relative;
-    margin-bottom: 30px;
-    overflow: hidden;
+.team-item:hover {
+    transform: scale(1.05);
 }
 
-.team .team-img {
+.team-img {
     position: relative;
-}
-
-.team .team-img img {
     width: 100%;
 }
 
-.team .team-text {
+.team-img img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+.team-text {
     position: relative;
     padding: 25px 15px;
     text-align: center;
@@ -910,28 +919,28 @@ a:focus {
     transition: .5s;
 }
 
-.team .team-text h2 {
-    font-size: 20px;
-    font-weight: 600;
+.team-text h2 {
+    font-size: 22px;
+    font-weight: bold;
     color: #FB6214;
     transition: .5s;
 }
 
-.team .team-text p {
+.team-text p {
     margin: 0;
     color: #ffffff;
 }
 
-.team .team-item:hover .team-text {
+.team-item:hover .team-text {
     background: #05C1E4;
 }
 
-.team .team-item:hover .team-text h2 {
+.team-item:hover .team-text h2 {
     color: #4D19A3;
     letter-spacing: 1px;
 }
 
-.team .team-text-2 {
+.team-text-2 {
     position: relative;
     padding: 25px 15px;
     text-align: center;
@@ -939,23 +948,23 @@ a:focus {
     transition: .5s;
 }
 
-.team .team-text-2 h2 {
+.team-text-2 h2 {
     font-size: 15px;
     font-weight: 600;
     color: #4D19A3;
     transition: .5s;
 }
 
-.team .team-item:hover .team-text-2 {
+.team-item:hover .team-text-2 {
     background: #4D19A3;
 }
 
-.team .team-item:hover .team-text-2 h2 {
+.team-item:hover .team-text-2 h2 {
     color: #05C1E4;
     letter-spacing: 1px;
 }
 
-.team .team-social {
+.team-social {
     position: absolute;
     width: 100px;
     top: 0;
@@ -965,7 +974,7 @@ a:focus {
     font-size: 0;
 }
 
-.team .team-social a {
+.team-social a {
     position: relative;
     left: 0;
     width: 50px;
@@ -977,29 +986,35 @@ a:focus {
     color: #ffffff;
 }
 
-.team .team-item:hover .team-social a:first-child {
+.team-item:hover .team-social a:first-child {
     background: #00acee;
     left: 50px;
     transition: .3s 0s;
 }
 
-.team .team-item:hover .team-social a:nth-child(2) {
+.team-item:hover .team-social a:nth-child(2) {
     background: #3b5998;
     left: 50px;
     transition: .3s .1s;
 }
 
-.team .team-item:hover .team-social a:nth-child(3) {
+.team-item:hover .team-social a:nth-child(3) {
     background: #0e76a8;
     left: 50px;
     transition: .3s .2s;
 }
 
-.team .team-item:hover .team-social a:nth-child(4) {
+.team-item:hover .team-social a:nth-child(4) {
     background: #3f729b;
     left: 50px;
     transition: .3s .3s;
 }
+
+/* Section Header */
+.section-header {
+    margin-bottom: 30px;
+}
+
 
 
 /*******************************/
@@ -2347,9 +2362,10 @@ ul.product-share li:hover a {
 .service-menu ul li a:hover {
     color: #ffe200;
 }
+
 .product-section .row {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -2714,4 +2730,19 @@ table.order-details tbody td {
     box-shadow: 0 0 20px #e4e4e4;
     padding-bottom: 50px;
     border-radius: 5px;
+}
+
+/*PDF BROCHURE*/
+.pdf-section {
+    padding: 50px 0; /* Espaciado superior e inferior */
+}
+
+.pdf-section .section-header {
+    margin-bottom: 30px; /* Espacio entre el encabezado y el iframe */
+}
+
+.pdf-section iframe {
+    border: 1px solid #ccc; /* Borde alrededor del iframe */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el iframe */
 }
