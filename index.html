@@ -98,7 +98,8 @@
                     </div>
                     <div class="modal-body p-0">
                         <!-- Imagen dentro del modal, con clase img-fluid para hacerla responsiva -->
-                        <img src="img/ventana_emergente/beneficios.jpg" alt="Popup Image" class="img-fluid" id="popupImage">
+                        <img src="img/ventana_emergente/beneficios.jpg" alt="Popup Image" class="img-fluid"
+                            id="popupImage">
                     </div>
                 </div>
             </div>
@@ -259,11 +260,25 @@
                     <p>____________________</p>
                     <h2>Speakers Confirmados</h2>
                 </div>
-                <div class="row">
-                    <!--PMI GLOBAL MENTOR-->
 
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="filterSpeakers()"
+                        placeholder="Buscar por nombre...">
+                    <select id="categorySelect" onchange="filterByCategory()">
+                        <option value="">Todos</option>
+                        <option value="PMO">PMO</option>
+                        <option value="INTELIGENCIA ARTIFICIAL">Inteligencia Artificial</option>
+                        <option value="EMPRENDIMIENTO">Emprendimiento</option>
+                        <option value="CONSTRUCCIÓN 4.0">Construcción 4.0</option>
+                        <option value="CAJAMARQUINO WOW">Cajamarquinos Wow</option>
+                        <option value="MINERIA">Minería</option>
+                    </select>
+                </div>
+
+
+                <div class="row">
                     <!--PMO-->
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/rosariochavez.png" alt="ROSARIOCHAVEZ">
@@ -289,7 +304,7 @@
                     </div>
 
                     <!--INTELIGENCIA ARTIFICIAL-->
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/marcocalle.png" alt="MARCOCALLE">
@@ -314,7 +329,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/eddymorris.png" alt="EDDYMORRIS">
@@ -340,7 +355,7 @@
                     </div>
 
                     <!--CONSTRUCCION-->
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/luisquiroz.png" alt="LUISQUIROZ">
@@ -365,7 +380,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/alexandredelsavio.png" alt="ALEXANDREDESAVIO">
@@ -390,7 +405,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/josedelatorreugarte.png" alt="JOSEDELATORREUGARTE">
@@ -416,13 +431,13 @@
                     </div>
 
                     <!--EMPRENDIMIENTO-->
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/germanmartinez.png" alt="GERMANMARTINEZ">
                             </div>
                             <div class="team-text-2">
-                                <h2>EMPRENDIMIENTO - AGILE</h2>
+                                <h2>EMPRENDIMIENTO</h2>
                             </div>
                             <div class="team-text">
                                 <h2>German Martinez</h2>
@@ -441,7 +456,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/diegoreyes.png" alt="DIEGOREYES">
@@ -466,7 +481,7 @@
                     </div>
 
                     <!--CAJAMARQUINOS WOW-->
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/miguelcotrina.png" alt="MIGUELCOTRINA">
@@ -490,7 +505,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/rodolfoortiz.png" alt="RODOLFOORTIZ">
@@ -514,7 +529,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/aliciamedina.png" alt="ALICIAMEDINA">
@@ -538,7 +553,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/esgardsalcedo.png" alt="ESGARDSALCEDO">
@@ -565,7 +580,7 @@
                     </div>
 
                     <!--MINERIA-->
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/christaquiroz.png" alt="CHRISTAQUIROZ">
@@ -588,7 +603,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/luisnoriega.png" alt="LUISNORIEGA">
@@ -612,7 +627,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-3 col-md-6 wow">
                         <div class="team-item">
                             <div class="team-img">
                                 <img src="img/speakers/luismarin.png" alt="LUISMARIN">

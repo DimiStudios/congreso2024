@@ -135,4 +135,32 @@
 
     portfolioIsotope.isotope({ filter: $(this).data("filter") });
   });
+
+  document.getElementById('searchInput').addEventListener('input', function() {
+    filterSpeakers();
+});
+
+document.getElementById('categorySelect').addEventListener('change', function() {
+    filterSpeakers();
+});
+
+function filterSpeakers() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const categorySelect = document.getElementById('categorySelect').value;
+    const speakers = document.querySelectorAll('.team-item');
+
+    speakers.forEach(speaker => {
+        const speakerName = speaker.querySelector('.team-text h2').innerText.toLowerCase();
+        const speakerCategory = speaker.querySelector('.team-text-2 h2').innerText;
+
+        const matchesName = speakerName.includes(searchInput);
+        const matchesCategory = categorySelect === "" || speakerCategory === categorySelect;
+
+        if (matchesName && matchesCategory) {
+            speaker.closest('.col-lg-3').style.display = "block";
+        } else {
+            speaker.closest('.col-lg-3').style.display = "none";
+        }
+    });
+}
 })(jQuery);

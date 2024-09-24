@@ -1015,6 +1015,39 @@ a:focus {
     margin-bottom: 30px;
 }
 
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#searchInput, #categorySelect {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#searchInput {
+    width: 40%;
+}
+
+#categorySelect {
+    width: 20%;
+}
 
 
 /*******************************/
