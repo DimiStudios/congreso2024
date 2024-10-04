@@ -125,6 +125,35 @@
         </div>
         <!-- PORTADA -->
 
+        <!--CONTADOR-->
+        <div class="contador-container">
+            <div class="section-header text-center">
+                <p>____________________</p>
+                <h2>La aventura está por comenzar</h2>
+                <p>Solamente faltan...</p>
+            </div>            
+            <div class="contador" id="contador">
+                <div class="tiempo">
+                    <span id="dias" class="numero">00</span>
+                    <span class="etiqueta">Días</span>
+                </div>
+                <div class="tiempo">
+                    <span id="horas" class="numero">00</span>
+                    <span class="etiqueta">Horas</span>
+                </div>
+                <div class="tiempo">
+                    <span id="minutos" class="numero">00</span>
+                    <span class="etiqueta">Minutos</span>
+                </div>
+                <div class="tiempo">
+                    <span id="segundos" class="numero">00</span>
+                    <span class="etiqueta">Segundos</span>
+                </div>
+            </div>
+        </div>
+        
+        <!--CONTADOR-->
+
         <!-- SOBRE EL EVENTO -->
         <div class="about wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
@@ -262,8 +291,7 @@
                 </div>
 
                 <div class="search-container">
-                    <input type="text" id="searchInput" onkeyup="filterSpeakers()"
-                        placeholder="Buscar por nombre...">
+                    <input type="text" id="searchInput" onkeyup="filterSpeakers()" placeholder="Buscar por nombre...">
                     <select id="categorySelect" onchange="filterByCategory()">
                         <option value="">Todos</option>
                         <option value="PMO">PMO</option>
