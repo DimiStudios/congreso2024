@@ -165,7 +165,7 @@ function filterSpeakers() {
 }
 
 function actualizarContador() {
-  const fechaObjetivo = new Date('October 26, 2024 00:00:00').getTime();
+  const fechaObjetivo = new Date('October 25, 2024 00:00:00').getTime();
   const ahora = new Date().getTime();
   const diferencia = fechaObjetivo - ahora;
 
