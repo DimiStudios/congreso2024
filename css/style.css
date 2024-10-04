@@ -2852,15 +2852,76 @@ table.order-details tbody td {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el iframe */
 }
 
+
+
 /*VENTANA EMERGENTE*/
-.modal-dialog {
-    max-width: 80%;
-    width: auto;
+.modal-backdrop.show {
+    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
+.modal-dialog {
+    max-width: 70%;
+    width: auto;
+    animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9); /* Fondo con transparencia */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde tenue */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+    overflow: hidden;
+}
+
+/* Imagen adaptada al tamaño de la ventana */
 .modal-body img {
-    width: 80%;
-    height: auto; /* La imagen se ajusta dinámicamente */
+    width: 100%; /* La imagen se adapta al tamaño del modal */
+    height: auto;
     display: block;
     margin: 0 auto;
 }
+
+.overlay-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro detrás del texto */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Botón de cerrar con estilo más visible */
+.modal-header .close {
+    font-size: 2rem; /* Tamaño más grande */
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+}
+
+/* Animación de entrada para la ventana emergente */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90%;
+    }
+    
+    .overlay-title {
+        font-size: 1.5rem; /* Texto más pequeño en móviles */
+    }
+}
+
