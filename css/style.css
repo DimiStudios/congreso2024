@@ -2902,7 +2902,6 @@ table.order-details tbody td {
     opacity: 1;
 }
 
-/* Animación de entrada para la ventana emergente */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -2914,14 +2913,13 @@ table.order-details tbody td {
     }
 }
 
-/* Adaptaciones para pantallas más pequeñas */
 @media (max-width: 768px) {
     .modal-dialog {
         max-width: 90%;
     }
     
     .overlay-title {
-        font-size: 1.5rem; /* Texto más pequeño en móviles */
+        font-size: 1.5rem; 
     }
 }
 
