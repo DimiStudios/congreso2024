@@ -541,6 +541,7 @@ a:focus {
     background: #fafafa;
     overflow: hidden;
     text-align: center;
+    margin-bottom: 30px; /* Agregar margen en la parte inferior */
 }
 
 .feature .feature-icon {
@@ -588,6 +589,7 @@ a:focus {
 @media (max-width: 767px) {
     .feature .feature-item {
         padding: 20px;
+        margin-bottom: 10px; /* Ajustar margen en dispositivos más pequeños */
     }
 
     .feature .feature-icon {
