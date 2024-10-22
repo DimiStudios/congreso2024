@@ -2839,6 +2839,34 @@ table.order-details tbody td {
     border-radius: 5px;
 }
 
+.single-product-item {
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 30%; /* Ajusta según sea necesario */
+    left: -10%; /* Ajusta según sea necesario */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la relación de aspecto */
+    pointer-events: block; /* Permite clics en el contenido de abajo */
+
+}
+
+.overlay-image img {
+    width: 150%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    transform: rotate(-45deg); /* Rota la imagen */
+}
+
+.blur-image img {
+    filter: blur(4px); /* Ajusta el valor para el desenfoque que desees */
+    transition: filter 0.3s ease; /* Suaviza la transición del desenfoque */
+    pointer-events: none; /* Permite clics en el contenido de abajo */
+
+}
+
+
 /*PDF BROCHURE*/
 .pdf-section {
     padding: 50px 0; /* Espaciado superior e inferior */
@@ -2853,6 +2881,7 @@ table.order-details tbody td {
     border-radius: 5px; /* Esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el iframe */
 }
+
 
 
 
