@@ -326,7 +326,7 @@ a:focus {
 .contador-container {
     text-align: center;
     background-color: #f3f4f6; /* Color de fondo más suave */
-    padding: 80px; /* Mayor padding para más espacio */
+    padding: 150px; /* Mayor padding para más espacio */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
     transition: background-color 0.3s ease; /* Transición suave para el fondo */
@@ -341,11 +341,26 @@ a:focus {
 }
 
 /* Contador */
+.contador-imagen {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Espacio entre contador e imagen */
+    margin: 20px; /* Desplaza el contenedor hacia el interior */
+}
+
+/* Estilo de la imagen */
+.imagen {
+    width: 150px; /* Ajusta el tamaño según lo que necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 20px; /* Espaciado a la izquierda de la imagen */
+}
+
+/* Contador */
 .contador {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra los elementos del contador */
     align-items: center;
-    gap: 30px; /* Espaciado entre elementos */
+    gap: 30px; /* Espaciado entre elementos del contador */
 }
 
 /* Elementos de tiempo */

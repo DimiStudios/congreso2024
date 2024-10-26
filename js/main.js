@@ -165,22 +165,70 @@ function filterSpeakers() {
 }
 
 function actualizarContador() {
-  const fechaObjetivo = new Date('October 25, 2024 00:00:00').getTime();
+  const fechaObjetivo = new Date('October 25, 2024 18:00:00').getTime(); 
   const ahora = new Date().getTime();
   const diferencia = fechaObjetivo - ahora;
 
-  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-  const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+  // Calcular días, horas, minutos y segundos
+  const dias = Math.max(0, Math.floor(diferencia / (1000 * 60 * 60 * 24)));
+  const horas = Math.max(0, Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const minutos = Math.max(0, Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60)));
+  const segundos = Math.max(0, Math.floor((diferencia % (1000 * 60)) / 1000));
 
-  document.getElementById('dias').innerHTML = dias;
-  document.getElementById('horas').innerHTML = horas;
-  document.getElementById('minutos').innerHTML = minutos;
-  document.getElementById('segundos').innerHTML = segundos;
+  // Actualizar el contador en el HTML
+  document.getElementById('dias').innerHTML = dias.toString().padStart(2, '0');
+  document.getElementById('horas').innerHTML = horas.toString().padStart(2, '0');
+  document.getElementById('minutos').innerHTML = minutos.toString().padStart(2, '0');
+  document.getElementById('segundos').innerHTML = segundos.toString().padStart(2, '0');
+
+  // Comprobar si el contador ha llegado a cero
+  if (diferencia < 0) {
+      // Asegurarse de que el contador se quede en cero
+      document.getElementById('dias').innerHTML = "00";
+      document.getElementById('horas').innerHTML = "00";
+      document.getElementById('minutos').innerHTML = "00";
+      document.getElementById('segundos').innerHTML = "00";
+
+      // Mostrar confeti solo una vez
+      if (!confetiMostrado) {
+          lanzarConfeti();
+          confetiMostrado = true; // Cambia el estado para no volver a mostrar confeti
+      }
+  }
 }
 
+// Variable para controlar si el confeti ya fue mostrado
+let confetiMostrado = false;
+
+// Función para lanzar confeti
+function lanzarConfeti() {
+  const duration = 5 * 1000; // Duración del confeti en milisegundos
+  const animationEnd = Date.now() + duration;
+
+  // Función que crea el efecto de confeti
+  (function frame() {
+      confetti({
+          particleCount: 7,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+      });
+      confetti({
+          particleCount: 7,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+      });
+
+      // Continuar lanzando confeti hasta que se cumpla la duración
+      if (Date.now() < animationEnd) {
+          requestAnimationFrame(frame);
+      }
+  })();
+}
+
+// Inicializar el contador y el intervalo
 actualizarContador();
-setInterval(actualizarContador, 1000);
+const intervalo = setInterval(actualizarContador, 1000);
 
 })(jQuery);
